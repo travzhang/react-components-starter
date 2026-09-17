@@ -8,7 +8,7 @@ export interface TokenProps {
 }
 
 export function Token({ token }: TokenProps): ReactElement {
-  return <Text style={styles.text}>{token.text}</Text>;
+  return <Text style={styles.text}>{token.text}乌鸦坐飞机</Text>;
 }
 
 const styles = StyleSheet.create({
