@@ -45,4 +45,4 @@ jobs:
       - name: Preview Release
         if: matrix.os == 'ubuntu-latest' && matrix.node == 22
         continue-on-error: true
-        run: pnpm exec pkg-pr-new publish --compact --commentWithSha --no-template --pnpm .
+        run: pnpx pkg-pr-new publish --compact --commentWithSha --no-template --pnpm .
