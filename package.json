@@ -1,0 +1,57 @@
+{
+  "name": "react-components-starter",
+  "type": "module",
+  "version": "0.0.0",
+  "description": "A starter for creating a React component library.",
+  "author": "Author Name <author.name@mail.com>",
+  "license": "MIT",
+  "homepage": "https://github.com/author/library#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/author/library.git"
+  },
+  "bugs": {
+    "url": "https://github.com/author/library/issues"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./index.native": "./dist/index.native.js",
+    "./primitives.native": "./dist/primitives.native.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "test": "vitest",
+    "typecheck": "tsc --noEmit",
+    "release": "bumpp",
+    "prepublishOnly": "pnpm run build"
+  },
+  "peerDependencies": {
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "react-native": "catalog:"
+  },
+  "devDependencies": {
+    "@babel/core": "catalog:",
+    "react-native": "catalog:",
+    "@tsconfig/strictest": "^2.0.8",
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "catalog:",
+    "@vitest/browser-playwright": "^4.1.10",
+    "bumpp": "^11.1.0",
+    "tsdown": "^0.22.5",
+    "typescript": "catalog:",
+    "vite": "catalog:",
+    "vitest": "^4.1.10",
+    "vitest-browser-react": "^2.2.0"
+  }
+}
